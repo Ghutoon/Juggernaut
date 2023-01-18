@@ -16,11 +16,12 @@ app.get('/api/messages', function (req, res) {
   }
   else{
     console.log("Token not verified");
-    res.send(403);
+    res.sendStatus(403);
   }
 });
 app.post('/api/messages', function (req, res) {
   console.dir(req.body, { depth: null });
+  console.log("Message from phone recieved from server");
   res.sendStatus(200);
 
 
