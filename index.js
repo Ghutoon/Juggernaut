@@ -22,8 +22,8 @@ app.get('/api/messages', function (req, res) {
 
 app.post('/api/messages', function (req, res) {
   console.dir(req.body, { depth: null });
-  var x = req.body.entry[0].changes[0].value.messages[0].from;
-  var y = req.body.entry[0].changes[0].value.messages[0].from.text.body;
+  var x = req.body.entry[0].changes[0].value["messages"][0]["from"];
+  var y = req.body.entry[0].changes[0].value["messages"][0]["text"]["body"];
 
   console.log(x);
   console.log(y);
