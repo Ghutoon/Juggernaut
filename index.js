@@ -64,7 +64,13 @@ app.post('/api/messages', function (req, res) {
 
 });
 
-console.log(temp);
+
+app.post('/api/messages', function (req, res) {
+  console.log(temp);
+  res.sendStatus(200);
+});
+
+
 app.listen(port);
 console.log('Server started at http://localhost:' + port);
 
