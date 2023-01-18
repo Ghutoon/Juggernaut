@@ -19,10 +19,17 @@ app.get('/api/messages', function (req, res) {
     res.sendStatus(403);
   }
 });
+
 app.post('/api/messages', function (req, res) {
   console.dir(req.body, { depth: null });
+  var x = req.body.entry[0].changes[0].value.messages[0].from;
+  var y = req.body.entry[0].changes[0].value.messages[0].from.text.body;
+
+  console.log(x);
+  console.log(y);
+
   console.log("Message from phone recieved from server");
-  console.log(req.body.entry[id]);
+
   res.sendStatus(200);
 
 
