@@ -22,6 +22,7 @@ app.get('/api/messages', function (req, res) {
 app.post('/api/messages', function (req, res) {
   console.dir(req.body, { depth: null });
   console.log("Message from phone recieved from server");
+  console.log(req.body.entry[id]);
   res.sendStatus(200);
 
 
