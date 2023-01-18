@@ -20,7 +20,7 @@ app.get('/api/messages', function (req, res) {
   }
 });
 app.post('/api/messages', function (req, res) {
-  console.dir(req.body, { depth: null })
+  console.dir(req.body, { depth: null });
   res.sendStatus(200);
 
 
