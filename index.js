@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 8080; // TODO : 
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json);
+app.use(express.json());
 
   app.post('/api/messages', function(req, res) {
     console.dir(req.body, {depth:null})
